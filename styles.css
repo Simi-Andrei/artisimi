@@ -1,0 +1,805 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trirong", sans-serif;
+}
+
+@font-face {
+  font-family: "ambarella";
+  src: url(./font-ambarella/Ambarella.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/*Navbar Area*/
+
+.navbar {
+  background-color: #000;
+  padding-top: 1rem 0;
+  border-bottom: 1px solid #adadad;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 2rem;
+}
+
+.navbar .navbar-brand {
+  font-size: 3rem;
+  letter-spacing: 2.5rem;
+  line-height: 3rem;
+  font-weight: 200;
+  width: 0px;
+  transition: all 0.7s;
+  color: #adadad;
+  cursor: default;
+  pointer-events: none;
+}
+
+#brand.scrolled {
+  transform: translateX(10px) scaleX(0.00001);
+}
+
+.navbar .nav-link {
+  color: #adadad;
+  margin: 0 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.navbar .nav-link:hover {
+  color: whitesmoke;
+}
+
+/*Banner Area*/
+
+.banner-area img {
+  position: absolute;
+  top: -5rem;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.banner-area .banner-text {
+  padding-top: 26%;
+  padding-bottom: 4%;
+  color: #adadad;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.banner-area h1 {
+  color: whitesmoke;
+}
+.banner-area .banner-text span {
+  color: rgb(125, 25, 25);
+}
+
+.banner-area button {
+  color: whitesmoke;
+  border: 1px solid #adadad;
+  padding: 0.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.banner-area button:hover {
+  background-color: #adadad;
+  border: 1px solid #adadad;
+  color: #000;
+}
+
+/*History Area*/
+
+#bulb {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+#bulb.scrolled {
+  opacity: 1;
+}
+
+.subtitle {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  color: whitesmoke;
+}
+
+.para {
+  color: #adadad;
+  padding: 0 5rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.8s ease;
+}
+
+.para.scrolled {
+  opacity: 1;
+  transform: translateY(0);
+}
+.carousel-wrapper {
+  padding: 2rem;
+}
+
+.carousel {
+  padding: 4rem 14rem;
+}
+
+.carousel-item {
+  padding: 2rem;
+  border: 2px solid #adadad;
+  box-shadow: inset 0px 4px 30px rgb(125, 25, 25);
+  font-style: italic;
+}
+
+.carousel-item img {
+  filter: sepia(0.2) brightness(0.94) grayscale(0.1);
+}
+
+.carousel-item span {
+  font-family: "ambarella";
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: left;
+  padding-right: 0.6rem;
+  color: whitesmoke;
+}
+
+.carousel-item p {
+  font-family: "ambarella";
+  font-size: 1.4rem;
+  text-align: left;
+  color: whitesmoke;
+}
+
+.carousel-caption {
+  left: 5rem;
+}
+
+.carousel-caption .carousel-item a {
+  display: inline;
+}
+
+/*News Area*/
+
+.news-area {
+  background: linear-gradient(black, #adadad);
+  padding: 10rem 0;
+  font-style: italic;
+}
+
+.news-area h2 {
+  color: whitesmoke;
+  font-family: "ambarella";
+  font-size: 3rem;
+  padding: 3rem 0;
+  text-shadow: 2px 2px #000;
+}
+
+.news-area h2 span {
+  font-family: "ambarella";
+  font-size: 5rem;
+  color: whitesmoke;
+}
+
+.news-area .card {
+  border: none;
+  border-radius: 0;
+  background: #000;
+  box-shadow: 0px 6px 10px black;
+  color: #adadad;
+  overflow: hidden;
+}
+
+.news-area .card .card-img-top {
+  transition: all 0.5s ease;
+  height: 20rem;
+}
+
+.news-area .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.news-area .card h5 {
+  padding-top: 2rem;
+  font-family: "ambarella";
+  font-size: 2rem;
+}
+
+.news-area .card p {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #adadad;
+}
+
+.news-container .card .card-body button {
+  border-radius: 0;
+  padding: 0.3rem 2rem;
+  border: 1px solid #adadad;
+  color: #adadad;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.news-container .card .card-body button:hover {
+  background-color: #adadad;
+  border: 1px solid #adadad;
+  color: #000;
+}
+
+/*Subscribe Area*/
+
+.subscribe-area {
+  background: #000;
+  color: #adadad;
+  padding: 4rem 0;
+}
+
+.subscribe-area h2 {
+  font-size: 2rem;
+}
+
+.subscribe-area label {
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 1rem 0;
+  display: block;
+  line-height: 1.2rem;
+}
+
+.subscribe-area input {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.8rem;
+  border: none;
+  border-bottom: 2px solid #adadad;
+  background: #000;
+  color: #adadad;
+  width: 20rem;
+}
+
+.subscribe-area input:focus {
+  outline: none;
+}
+
+.subscribe-area button {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #adadad;
+  color: #adadad;
+  margin: 2rem auto;
+  padding: 0.5rem 2rem;
+}
+
+.subscribe-area button:hover {
+  background: #adadad;
+  border: 1px solid #adadad;
+  color: #000;
+}
+
+.subscribe-area .social i {
+  font-size: 2rem;
+  margin: 1rem 2rem 0 2rem;
+  cursor: pointer;
+}
+
+.subscribe-area .social .fa-youtube:hover {
+  color: #c00;
+  filter: brightness(0.9) grayscale(0.3);
+}
+
+.subscribe-area .social .fa-reddit:hover {
+  color: #ff4500;
+  filter: brightness(0.9) grayscale(0.3);
+}
+
+.subscribe-area .social .fa-discord:hover {
+  color: #738adb;
+  filter: brightness(0.9) grayscale(0.3);
+}
+
+/*Cards Area*/
+
+.cards-area {
+  margin: 1rem 0;
+  padding: 10rem 0;
+  background: linear-gradient(#adadad, black);
+  color: #adadad;
+}
+
+.cards-area h2 {
+  color: whitesmoke;
+  font-family: "ambarella";
+  font-size: 3rem;
+  padding: 3rem 0;
+  text-shadow: 2px 2px #000;
+  margin: 2rem;
+  letter-spacing: 0.3rem;
+  font-style: italic;
+}
+
+.cards-area span {
+  font-family: "ambarella";
+  font-size: 4rem;
+  color: whitesmoke;
+}
+
+.cards-area .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards-area .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 2px 10px #000;
+  height: 25rem;
+  width: 20rem;
+  border: 1px solid #adadad;
+  margin: 2rem;
+}
+
+.cards-area .box .card-back-para {
+  position: absolute;
+  top: 88%;
+  font-family: "ambarella";
+  font-size: 1.6rem;
+  text-shadow: 2px 2px #000;
+}
+
+.cards-area .card {
+  height: 23rem;
+  border-radius: 0;
+  background-color: #000;
+  transition: all 0.3s ease;
+  border: 1px solid #adadad;
+}
+
+.cards-area .card .card-title {
+  font-family: "ambarella";
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+
+.cards-area .card-text {
+  padding-top: 2.5rem;
+}
+
+.cards-area img {
+  width: 1.2rem;
+  height: 1.5rem;
+  margin-top: 1rem;
+  filter: brightness(0.7);
+}
+
+.cards-area .card .card-body {
+  padding: 1rem 2rem;
+}
+
+.cards-area .card:hover {
+  transform: translateY(-3rem);
+  border-radius: 0.8rem;
+}
+
+.cards-area .cards-para {
+  padding: 2rem 0;
+  margin: 2rem 2rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #adadad;
+  text-shadow: 2px 2px #000;
+}
+
+/*Parallax Area*/
+
+.parallax-area {
+  background-image: url(./images/parallax-image.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 2px 10px #000;
+}
+
+.parallax-area p {
+  padding: 10rem 0;
+  font-size: 4rem;
+  font-family: "ambarella";
+  font-weight: 700;
+  text-shadow: 2px 2px #adadad;
+}
+
+.parallax-area p span {
+  font-size: 6rem;
+  font-family: "ambarella";
+  font-weight: 700;
+}
+
+/*Shop Area*/
+
+.shop-area {
+  padding: 10rem 0;
+  margin: 10rem 0;
+}
+
+.shop-area .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-area .shop-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shop-area h2 {
+  color: whitesmoke;
+  font-family: "ambarella";
+  font-size: 3rem;
+  padding: 1rem 3rem;
+  text-shadow: 1px 1px #adadad;
+}
+
+.shop-area .shop-text p {
+  color: #adadad;
+  padding: 1rem 2rem;
+}
+
+.shop-area .shop-text p span {
+  cursor: pointer;
+  color: rgb(125, 25, 25);
+}
+
+.shop-area .shop-text button {
+  color: whitesmoke;
+  border: 1px solid #adadad;
+  padding: 0.5rem 2rem;
+  margin: 2rem 5rem;
+}
+
+.shop-area button:hover {
+  background-color: #adadad;
+  border: 1px solid #adadad;
+  color: #000;
+}
+
+.shop-area .shop-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.shop-area img {
+  width: 12rem;
+  height: 12rem;
+}
+
+.shop-area .element {
+  position: relative;
+}
+
+.shop-area .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.shop-area .image-overlay button {
+  color: whitesmoke;
+  border: 1px solid #adadad;
+  padding: 0.5rem 2rem;
+  margin: 2rem 2rem;
+}
+
+.shop-area .image-overlay button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #adadad;
+  color: whitesmoke;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+/*Contact Area*/
+
+.contact-area {
+  padding: 10rem 0;
+  margin: 5rem 0;
+  color: whitesmoke;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/contact-image.jpeg);
+}
+
+.contact-area .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-area .contact-para {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.contact-area .arrow {
+  position: relative;
+}
+
+.contact-area .arrow-body {
+  height: 1rem;
+  width: 36.3rem;
+  border-top: 1px solid #adadad;
+}
+
+.contact-area .arrow-point {
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(45deg);
+  border-top: 1px solid #adadad;
+  border-right: 1px solid #adadad;
+  position: absolute;
+  top: -1rem;
+  left: 34rem;
+}
+
+.contact-area input {
+  border: 1px solid #adadad;
+  background: rgba(0, 0, 0, 0.5);
+  color: #adadad;
+  padding: 0.6rem 1rem;
+}
+
+.contact-area input:focus {
+  background: #000;
+  outline: none;
+  border: 1px solid #adadad;
+}
+
+.contact-area select {
+  background: rgba(0, 0, 0, 0.5);
+  color: #adadad;
+  cursor: pointer;
+  padding: 0.7rem;
+  margin-top: 3rem;
+}
+
+.contact-area .agree {
+  padding: 1rem 0;
+}
+
+.contact-area input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+
+.contact-area .pptc {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-area .pptc:hover {
+  color: rgb(125, 25, 25);
+}
+
+.contact-area button {
+  margin: 1rem 0;
+  color: #adadad;
+  border: 1px solid #adadad;
+  padding: 0.6rem 2rem;
+}
+
+.contact-area button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #adadad;
+  color: #adadad;
+}
+
+/*Footer Area*/
+
+.footer-area {
+  border-top: 1px solid #adadad;
+}
+
+.footer-area .footer-para {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #adadad;
+  padding-top: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.footer-area .social i {
+  font-size: 1.8rem;
+  padding: 1rem 1rem;
+}
+
+.footer-area .social i:hover {
+  color: #adadad;
+  cursor: pointer;
+}
+
+.footer-area .contact {
+  color: #adadad;
+}
+
+.footer-area .copy-para {
+  color: #adadad;
+}
+
+.footer-area .signature {
+  text-decoration: none;
+  color: #adadad;
+  font-style: italic;
+  font-family: "ambarella";
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.footer-area .logo {
+  margin-bottom: 2rem;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 768px) {
+  #brand {
+    display: none;
+  }
+  .navbar {
+    padding: 1rem 0;
+    margin: 0 0;
+  }
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+  .banner-area img {
+    padding-top: 10%;
+  }
+  .banner-area .banner-text {
+    padding-top: 40%;
+  }
+  #bulb {
+    opacity: 1;
+  }
+  .history-area .para {
+    opacity: 1;
+    transform: none;
+  }
+  .carousel-wrapper .carousel-item p {
+    display: none;
+  }
+  .carousel-wrapper .carousel-item {
+    padding: 0;
+    margin: 0;
+  }
+  .news-area h2 {
+    font-size: 2rem;
+  }
+  .news-area .card {
+    height: 23rem;
+  }
+  .news-area .card .card-text {
+    display: none;
+  }
+  .subscribe-area h2 {
+    font-size: 1.8rem;
+  }
+  .cards-area h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0rem;
+    padding-top: 0rem;
+  }
+  .cards-area p {
+    text-align: center;
+  }
+  .parallax-area {
+    width: 100%;
+  }
+  .parallax-area p {
+    font-size: 2rem;
+    margin: 0;
+    padding-left: 12rem;
+  }
+  .parallax-area p span {
+    font-size: 3rem;
+  }
+  .shop-area h2 {
+    padding-top: 4rem;
+  }
+  .contact-area {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .contact-area .arrow {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .banner-area img {
+    display: none;
+  }
+  .history-area p {
+    padding: 0.5rem 0 0 0;
+    margin: 0;
+  }
+  .carousel-wrapper {
+    display: none;
+  }
+  .news-area {
+    padding-top: 0;
+  }
+  .news-area .card {
+    height: 24rem;
+  }
+  .news-area h2 {
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+  }
+  .news-area h2 span {
+    font-size: 3rem;
+  }
+  .subscribe-area h2 {
+    font-size: 1.5rem;
+  }
+  .cards-area h2 {
+    font-size: 1.5rem;
+    color: #000;
+    text-shadow: none;
+    font-weight: 700;
+  }
+  .cards-area h2 span {
+    font-size: 3rem;
+    color: #000;
+    text-shadow: none;
+    font-weight: 700;
+  }
+  .cards-area .card {
+    margin: 1rem;
+  }
+  .parallax-area p {
+    font-size: 1.5rem;
+    padding: 0 0 1rem 1rem;
+  }
+  .parallax-area p span {
+    font-size: 3rem;
+  }
+  .shop-area {
+    padding: 0;
+  }
+  .shop-area h2 {
+    font-size: 2rem;
+  }
+  .contact-area {
+    padding: 0;
+    margin-top: 0;
+  }
+  .footer-area .footer-para {
+    font-size: 1rem;
+    letter-spacing: normal;
+  }
+}
